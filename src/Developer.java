@@ -1,16 +1,22 @@
 public class Developer implements Employee {
 
     private String name;
-    private String job;
+    private String department;
+    private int grade;
 
-    public Developer(String name, String job) {
-        this.name = name;
-        this.job = job;
+    public int getGrade() {
+        return grade;
     }
+
+    public Developer(String name, String department,int grade) {
+        this.name = name;
+        this.department = department;
+        this.grade = grade;
+    }
+
 
     @Override
     public void work() {
-
         System.out.println("Я работаю как гусь");
         analyzeCode();
     }
@@ -19,10 +25,14 @@ public class Developer implements Employee {
     public void coffeeTime() {
 
     }
+
     public void analyzeCode() {
         int a = 1;
         int b = 2;
 
-        System.out.println(a+b);
+        System.out.println(a + b);
     }
+
+
+
 }
